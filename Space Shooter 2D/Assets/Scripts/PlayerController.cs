@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
 
     public Transform bottomLeftLimit, topRightLimit;
 
+    public Transform shotPoint;
+    public GameObject shot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +25,10 @@ public class PlayerController : MonoBehaviour
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.position.x, topRightLimit.position.x), 
             Mathf.Clamp(transform.position.y, bottomLeftLimit.position.y, topRightLimit.position.y), transform.position.z);//clamps player movement so it wont desapper from the frame(keeping player on screen)
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(shot, shotPoint.position, shotPoint.rotation);// Instantiate bullet into the world.
+        }
     }
 }
