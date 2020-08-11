@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShot : MonoBehaviour
 {
     public float shotSpeed = 7;
+    public GameObject impactEffect;
 
 
 
@@ -23,6 +24,7 @@ public class PlayerShot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 
