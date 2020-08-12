@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 767989037}
   - component: {fileID: 767989036}
   - component: {fileID: 767989039}
+  - component: {fileID: 767989040}
   m_Layer: 0
   m_Name: meteor-1
   m_TagString: Space Object
@@ -641,6 +642,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.64
+--- !u!114 &767989040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767989035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14204b030031d2a45bed71e323a30171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &779837280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,9 +1183,10 @@ GameObject:
   - component: {fileID: 1920026967}
   - component: {fileID: 1920026970}
   - component: {fileID: 1920026971}
+  - component: {fileID: 1920026973}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1299,6 +1313,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.39583334
+--- !u!114 &1920026973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920026966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d589a056fdfc3e14b86af263e18e4c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 1
+  deathEffect: {fileID: 8924574851826237234, guid: 33ab68dbee666e044ad75f82a6250864, type: 3}
 --- !u!1 &1941764858
 GameObject:
   m_ObjectHideFlags: 0
