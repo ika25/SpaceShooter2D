@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpeed: 7
   impactEffect: {fileID: 3999026823315409607, guid: 95da6d6959d99b44fb31e6b03cac4005, type: 3}
+  objectExplosion: {fileID: 7068290153585639137, guid: e15868c30565a7b45b84c9c154b35b31, type: 3}
 --- !u!50 &1944401257242540449
 Rigidbody2D:
   serializedVersion: 4

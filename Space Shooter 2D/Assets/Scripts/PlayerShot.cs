@@ -7,6 +7,8 @@ public class PlayerShot : MonoBehaviour
     public float shotSpeed = 7;
     public GameObject impactEffect;
 
+    public GameObject objectExplosion;//when object explouds
+
 
 
 
@@ -28,6 +30,7 @@ public class PlayerShot : MonoBehaviour
 
         if(other.tag == "Space Object")
         {
+            Instantiate(objectExplosion, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
 
