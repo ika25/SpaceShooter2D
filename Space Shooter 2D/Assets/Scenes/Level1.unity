@@ -1241,6 +1241,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  startDirection: {x: -1, y: 0.25}
+  shouldChangeDirection: 1
+  changeDirectionXPoint: 0
+  changeDirection: {x: -0.75, y: -0.5}
 --- !u!212 &1612395826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1300,7 +1304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612395822}
   m_LocalRotation: {x: 0.038977906, y: -0.01796237, z: 0.70721525, w: 0.7056946}
-  m_LocalPosition: {x: 1.41, y: -0.92, z: -0.06}
+  m_LocalPosition: {x: 8.14, y: -0.74, z: -0.25}
   m_LocalScale: {x: 0.36181962, y: 0.26110408, z: 0.5705927}
   m_Children: []
   m_Father: {fileID: 0}
