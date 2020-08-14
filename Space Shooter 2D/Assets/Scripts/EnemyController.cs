@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
 
     public bool shouldChangeDirection;
     public float changeDirectionXPoint;
-    public Vector2 changeDirection;
+    public Vector2 changeddirection;
 
     public GameObject shotToFire;
     public Transform firePoint;
@@ -20,17 +20,19 @@ public class EnemyController : MonoBehaviour
     public bool canShoot;
     private bool allowShooting;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        shotCounter = timeBetweenShots;  
+        shotCounter = timeBetweenShots;
     }
 
     // Update is called once per frame
     void Update()
     {
         //transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0f, 0f);
-        if(!shouldChangeDirection)
+
+        if (!shouldChangeDirection)
         {
             transform.position += new Vector3(startDirection.x * moveSpeed * Time.deltaTime, startDirection.y * moveSpeed * Time.deltaTime, 0f);
         }
@@ -42,10 +44,9 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                transform.position += new Vector3(changeDirection.x * moveSpeed * Time.deltaTime, changeDirection.y * moveSpeed * Time.deltaTime, 0f);
+                transform.position += new Vector3(changeddirection.x * moveSpeed * Time.deltaTime, changeddirection.y * moveSpeed * Time.deltaTime, 0f);
             }
         }
-
         if (allowShooting)
         {
             shotCounter -= Time.deltaTime;
