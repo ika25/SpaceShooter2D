@@ -20,6 +20,10 @@ public class EnemyController : MonoBehaviour
     public bool canShoot;
     private bool allowShooting;
 
+    ///Enemy Health contoroller Veriables
+    public int currentHealth;
+    public GameObject deathEffect;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +59,17 @@ public class EnemyController : MonoBehaviour
                 shotCounter = timeBetweenShots;
                 Instantiate(shotToFire, firePoint.position, firePoint.rotation);
             }
+        }
+    }
+
+    // Way to hurt Enemies function
+    public void HurtEnemy()
+    {
+        currentHealth--;
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            Instantiate(deathEffect, transform.position, transform.rotation);
         }
     }
 

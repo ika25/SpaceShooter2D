@@ -135,8 +135,10 @@ MonoBehaviour:
   changeddirection: {x: -0.75, y: -0.5}
   shotToFire: {fileID: 3871860599441512769, guid: 06569ef32722fac4e92c9a0532336907, type: 3}
   firePoint: {fileID: 2166208480521958597}
-  timeBetweenShots: 0.5
+  timeBetweenShots: 1
   canShoot: 1
+  currentHealth: 3
+  deathEffect: {fileID: 7068290153585639137, guid: e15868c30565a7b45b84c9c154b35b31, type: 3}
 --- !u!61 &5809431637936853758
 BoxCollider2D:
   m_ObjectHideFlags: 0

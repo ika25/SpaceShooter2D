@@ -34,6 +34,11 @@ public class PlayerShot : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        if(other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyController>().HurtEnemy();
+        }
+
         Destroy(this.gameObject);
     }
 
