@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 5809431637936853749}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 6.61, y: 0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 2166208480521958597}
   m_Father: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   startDirection: {x: -1, y: 0.25}
   shouldChangeDirection: 1
   changeDirectionXPoint: 0
-  changeddirection: {x: -0.75, y: -0.5}
+  changeddirection: {x: -0.5, y: -0.5}
   shotToFire: {fileID: 3871860599441512769, guid: 06569ef32722fac4e92c9a0532336907, type: 3}
   firePoint: {fileID: 2166208480521958597}
   timeBetweenShots: 1

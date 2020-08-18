@@ -129,10 +129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  startDirection: {x: 0, y: 0}
+  startDirection: {x: -1, y: -25}
   shouldChangeDirection: 1
   changeDirectionXPoint: 0
-  changeddirection: {x: 0, y: 0}
+  changeddirection: {x: -0.75, y: -0.5}
   shotToFire: {fileID: 3871860599441512769, guid: 06569ef32722fac4e92c9a0532336907, type: 3}
   firePoint: {fileID: 5880818619067747293}
   timeBetweenShots: 1
