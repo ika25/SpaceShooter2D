@@ -39,6 +39,16 @@ public class HealthManager : MonoBehaviour
             Instantiate(deathEffect, transform.position, transform.rotation);
 
             gameObject.SetActive(false);//deactivates from world which means we cant d anything for sshort amount of time.
+
+            GameManager.instance.killPlayer();
+
+            WaveManager.instance.canSpwanWaves = false;
         }
+    }
+
+    public void Respawn()
+    {
+        gameObject.SetActive(true);
+        currentHealth = maxHealth;
     }
 }
