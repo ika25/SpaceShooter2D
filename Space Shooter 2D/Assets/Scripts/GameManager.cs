@@ -16,9 +16,20 @@ public class GameManager : MonoBehaviour
         instance = this;//create instance soon as our objects is in scene
     }
 
+    void Start()
+    {
+        UIManager.instance.livesText.text = "x " + currentLives;
+    }
+
+    void Update()
+    {
+        
+    }
+
     public void killPlayer()
     {
         currentLives--;
+        UIManager.instance.livesText.text = "x " + currentLives;
 
         if (currentLives > 0)
         {

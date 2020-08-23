@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
     public GameObject gameOverScreen;//referance to game over screen
+
+    public Text livesText;
+
+
 
     private void Awake()
     {
