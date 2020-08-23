@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
 
     public Slider healthBar;
 
+    public Text scoreText;
+
 
 
     private void Awake()

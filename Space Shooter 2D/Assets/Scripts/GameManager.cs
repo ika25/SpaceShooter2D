@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public float respawnTime = 2f;
 
+    public int currentScore;
+
     private void Awake()
     {
         instance = this;//create instance soon as our objects is in scene
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UIManager.instance.livesText.text = "x " + currentLives;
+
+        UIManager.instance.scoreText.text = "Score: " + currentScore;
     }
 
     void Update()
@@ -52,6 +56,12 @@ public class GameManager : MonoBehaviour
         HealthManager.instance.Respawn();
 
         WaveManager.instance.ContinueSpawning();
+    }
+
+    public void AddScore(int scoreToAdd)
+    {
+        currentScore += scoreToAdd;
+        UIManager.instance.scoreText.text = "Score: " + currentScore;
     }
 
 }
