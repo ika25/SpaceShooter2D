@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
         else
         {
             //game over code
+            UIManager.instance.gameOverScreen.SetActive(true);
+            WaveManager.instance.canSpwanWaves = false;//when player dead no need to send any more enemies into the level.
         }
     }
 
