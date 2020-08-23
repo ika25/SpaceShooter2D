@@ -27,14 +27,18 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+
+        UIManager.instance.healthBar.maxValue = maxHealth;
+        UIManager.instance.healthBar.value = currentHealth;
     }
 
     
     public void HurtPlayer()
     {
-        currentHealth-=1;
+        currentHealth--;
+        UIManager.instance.healthBar.value = currentHealth;
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Instantiate(deathEffect, transform.position, transform.rotation);
 
@@ -50,5 +54,6 @@ public class HealthManager : MonoBehaviour
     {
         gameObject.SetActive(true);
         currentHealth = maxHealth;
+        UIManager.instance.healthBar.value = currentHealth;
     }
 }

@@ -67,6 +67,14 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: currentHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5809431637936853747, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.96
@@ -148,6 +156,14 @@ PrefabInstance:
     - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
       propertyPath: moveSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: currentHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5809431637936853747, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -231,6 +247,14 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: currentHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5809431637936853747, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.93
@@ -313,6 +337,14 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: currentHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5809431637936853747, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.68
@@ -394,6 +426,14 @@ PrefabInstance:
     - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
       propertyPath: moveSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809431637936853744, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
+      propertyPath: currentHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5809431637936853747, guid: 2238d2d235151994f8c7d9810c69a57e, type: 3}
       propertyPath: m_LocalPosition.x
