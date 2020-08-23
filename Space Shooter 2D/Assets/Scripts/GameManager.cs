@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         currentLives--;
 
-        if(currentLives > 0)
+        if (currentLives > 0)
         {
             //respawn code
             StartCoroutine(RespawnCo());
