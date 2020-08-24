@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
             //game over code
             UIManager.instance.gameOverScreen.SetActive(true);
             WaveManager.instance.canSpwanWaves = false;//when player dead no need to send any more enemies into the level.
+
+            MusicController.instance.PlayGameOver();//when we show game over screen we going to call music controller.
         }
     }
 
