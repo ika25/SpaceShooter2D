@@ -46,6 +46,6 @@ public class PlayerShot : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);// destroy Bullet
     }
 }

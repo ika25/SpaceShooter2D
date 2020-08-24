@@ -9,7 +9,7 @@ public class HealthManager : MonoBehaviour
     public int currentHealth;
     public int maxHealth;
 
-    public GameObject deathEffect;
+    public GameObject deathEffect;//add a particle system
 
     private void Awake()
     {

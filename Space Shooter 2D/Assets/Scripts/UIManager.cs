@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     public Slider healthBar;
 
-    public Text scoreText;
+    public Text scoreText, hiScoreText;
 
 
 

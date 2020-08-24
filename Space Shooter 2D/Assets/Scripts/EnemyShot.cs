@@ -19,7 +19,7 @@ public class EnemyShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= new Vector3(shotSpeed * Time.deltaTime, 0f, 0f);
+        transform.position -= new Vector3(shotSpeed * Time.deltaTime, 0f, 0f);//get the postion of the transform
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,6 +36,6 @@ public class EnemyShot : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);// destroy Bullet
     }
 }
