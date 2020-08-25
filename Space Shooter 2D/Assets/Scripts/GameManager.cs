@@ -81,4 +81,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public IEnumerator EndLevelCo()//corutine we want to make some txt appear on the screen one by one ones level complited
+    {
+        UIManager.instance.levelEndScreen.SetActive(true);//level end is done
+        yield return new WaitForSeconds(.5f);
+    }
+
 }
