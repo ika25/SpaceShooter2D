@@ -2435,7 +2435,7 @@ MonoBehaviour:
   currentScore: 0
   levelEnding: 0
   waitForLevelEnd: 5
-  nextLevel: Level3
+  nextLevel: Level2
 --- !u!1 &1193085848
 GameObject:
   m_ObjectHideFlags: 0

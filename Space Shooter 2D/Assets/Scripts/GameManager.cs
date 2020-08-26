@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public string nextLevel;
 
+    private bool canPause;
+
     private void Awake()
     {
         instance = this;//create instance soon as our objects is in scene
@@ -39,11 +41,16 @@ public class GameManager : MonoBehaviour
 
         highScore = PlayerPrefs.GetInt("HighScore");//this looks in PLayerPrefs and see what is the high score at the moment.
         UIManager.instance.hiScoreText.text = "High-Score " + highScore;//setting high score from start.
+
+        canPause = true;
     }
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape) && canPause)//when you press escape game will be paused or unpaused.
+        {
+            PauseUnpause();//function
+        }
     }
 
     public void killPlayer()
@@ -63,6 +70,8 @@ public class GameManager : MonoBehaviour
             WaveManager.instance.canSpwanWaves = false;//when player dead no need to send any more enemies into the level.
 
             MusicController.instance.PlayGameOver();//when we show game over screen we going to call music controller.
+
+            canPause = false;
         }
     }
 
@@ -94,6 +103,8 @@ public class GameManager : MonoBehaviour
         UIManager.instance.levelEndScreen.SetActive(true);//level end is done
         MusicController.instance.PlayVictoryMusic();//plays level completed music
 
+        canPause = false;
+
         yield return new WaitForSeconds(.5f);
 
         PlayerPrefs.SetInt("currentLives", currentLives);//This way we can keep track of how  many lives we have going into next level.
@@ -102,6 +113,22 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(nextLevel);
 
+    }
+
+    //Activating and deactivating pause menu,we want everything in game to stop moving when we pause the game.
+    public void PauseUnpause()
+    {
+        if(UIManager.instance.pauseScreen.activeInHierarchy)//this will check if pause menu is activated.
+        {
+            UIManager.instance.pauseScreen.SetActive(false);//if it already active deactivate.
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            UIManager.instance.pauseScreen.SetActive(true);//if its not active activate it.
+            Time.timeScale = 0f;//this will unity stop any objects moving freez everything.
+            
+        }
     }
 
 }

@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviour
 
     public GameObject levelEndScreen;
 
+    public GameObject pauseScreen;
+
 
 
     private void Awake()
@@ -47,6 +49,11 @@ public class UIManager : MonoBehaviour
     public void QuitToMain()
     {
 
+    }
+
+    public void Resume()
+    {
+        GameManager.instance.PauseUnpause();
     }
     
 }
