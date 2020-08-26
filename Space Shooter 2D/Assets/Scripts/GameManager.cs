@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class GameManager : MonoBehaviour
     //TRACK HIGH SCORE
     private int highScore = 500;
 
+    public bool levelEnding;
+
+    public float waitForLevelEnd = 5f;
+
+    public string nextLevel;
+
     private void Awake()
     {
         instance = this;//create instance soon as our objects is in scene
@@ -24,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        currentLives = PlayerPrefs.GetInt("CurrentLives");
         UIManager.instance.livesText.text = "x " + currentLives;
 
         UIManager.instance.scoreText.text = "Score: " + currentScore;
@@ -87,6 +95,13 @@ public class GameManager : MonoBehaviour
         MusicController.instance.PlayVictoryMusic();//plays level completed music
 
         yield return new WaitForSeconds(.5f);
+
+        PlayerPrefs.SetInt("currentLives", currentLives);//This way we can keep track of how  many lives we have going into next level.
+
+        yield return new WaitForSeconds(waitForLevelEnd);
+
+        SceneManager.LoadScene(nextLevel);
+
     }
 
 }
