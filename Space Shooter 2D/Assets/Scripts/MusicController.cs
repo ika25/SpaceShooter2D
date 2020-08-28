@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MusicController : MonoBehaviour
 {
     public static MusicController instance;
 
     public AudioSource levelMusic, victoryMusic, gameOverMusic, bossMusic;
+
 
     private void Awake()
     {
