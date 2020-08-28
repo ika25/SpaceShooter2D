@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c774d50c0441f4abe11502fb275e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volme: {fileID: 941725813}
+  volumeSlider: {fileID: 941725813}
   myMusic: {fileID: 2137956462}
 --- !u!4 &2137956464
 Transform:
@@ -2520,7 +2520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137956461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 543.4879, y: 338.5752, z: -41.701283}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 398691818}

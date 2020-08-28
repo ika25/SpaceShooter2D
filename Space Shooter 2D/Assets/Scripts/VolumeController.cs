@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class VolumeController : MonoBehaviour
 {
-    public Slider Volume;
+    public Slider volumeSlider;
     public AudioSource myMusic;
 
     void Update()
     {
-        myMusic.volume = Volume.value;
+        myMusic.volume = volumeSlider.value;
     }
 
 

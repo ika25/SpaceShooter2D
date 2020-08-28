@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &52027541707071352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1517,6 +1517,7 @@ MonoBehaviour:
   hiScoreText: {fileID: 52027542577583320}
   levelEndScreen: {fileID: 52027542046727992}
   pauseScreen: {fileID: 52027541707071353}
+  mainMenuName: MainMenu
 --- !u!1 &52027543241541243
 GameObject:
   m_ObjectHideFlags: 0
