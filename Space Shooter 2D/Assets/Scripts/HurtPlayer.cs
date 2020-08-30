@@ -16,11 +16,11 @@ public class HurtPlayer : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)//whenever meteor colides with player 
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")//check if its player it running into.
         {
-            HealthManager.instance.HurtPlayer();
+            HealthManager.instance.HurtPlayer();//telling health manager ti hurt player.
         }
     }
 }

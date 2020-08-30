@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    //Veriables
     public static UIManager instance;
 
     public GameObject gameOverScreen;//referance to game over screen
@@ -46,11 +47,13 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void QuitToMain()
     {
         SceneManager.LoadScene(mainMenuName);
+        Time.timeScale = 1f;
     }
 
     public void Resume()

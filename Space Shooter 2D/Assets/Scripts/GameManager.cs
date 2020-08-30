@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    //Veriables
     public static GameManager instance;//we can call this from any script within the game.
 
     public int currentLives = 3;//how many lives players have in each level.

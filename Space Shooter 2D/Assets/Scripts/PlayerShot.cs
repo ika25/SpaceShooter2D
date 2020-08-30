@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerShot : MonoBehaviour
 {
+    //Veriables
     public float shotSpeed = 7;
     public GameObject impactEffect;
 
@@ -21,10 +22,10 @@ public class PlayerShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(shotSpeed * Time.deltaTime, 0f, 0f);
+        transform.position += new Vector3(shotSpeed * Time.deltaTime, 0f, 0f);//we get shot moving
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)//we naming this other so we know this is the other objects that we are fighting against.
     {
         Instantiate(impactEffect, transform.position, transform.rotation);
 
@@ -41,7 +42,7 @@ public class PlayerShot : MonoBehaviour
             other.GetComponent<EnemyController>().HurtEnemy();
         }
 
-        Destroy(this.gameObject);
+        Destroy(this.gameObject);//we hit another objects and we want to bullet disappears.
     }
 
     private void OnBecameInvisible()

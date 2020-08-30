@@ -26,7 +26,7 @@ public class EnemyShot : MonoBehaviour
     {
         Instantiate(impactEffect, transform.position, transform.rotation);
 
-        if(other.tag == "Player")
+        if(other.tag == "Player")//we want to check if this bullet is hitting agaisnt player
         {
             HealthManager.instance.HurtPlayer();
         }
