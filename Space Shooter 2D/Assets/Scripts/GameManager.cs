@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
         canPause = false;
 
         yield return new WaitForSeconds(.5f);
-
+       
         PlayerPrefs.SetInt("HighScore", highScore);
 
         PlayerPrefs.SetInt("currentLives", currentLives);//This way we can keep track of how  many lives we have going into next level.
