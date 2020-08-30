@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
 
     public GameObject levelEndScreen;
 
+    public Text endLevelScore, endCurrentScore;
+    public GameObject highScoreNotice;
+
     public GameObject pauseScreen;
 
     public string mainMenuName = "MainMenu";

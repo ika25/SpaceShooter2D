@@ -34,7 +34,7 @@ public class GameCompleteScreen : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenTexts);
         message.gameObject.SetActive(true);
         yield return new WaitForSeconds(timeBetweenTexts);
-        score.text = "Final Score " + PlayerPrefs.GetInt("currentScore");//This will update the score that shows when we get end of the game.
+        score.text = "Final Score " + PlayerPrefs.GetInt("CurrentScore");//This will update the score that shows when we get end of the game.
         score.gameObject.SetActive(true);
         yield return new WaitForSeconds(timeBetweenTexts);
         pressKey.gameObject.SetActive(true);

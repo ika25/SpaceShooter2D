@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public bool levelEnding;
 
+    private int levelScore;
+
     public float waitForLevelEnd = 5f;
 
     public string nextLevel;
@@ -41,6 +43,9 @@ public class GameManager : MonoBehaviour
 
         highScore = PlayerPrefs.GetInt("HighScore");//this looks in PLayerPrefs and see what is the high score at the moment.
         UIManager.instance.hiScoreText.text = "High-Score " + highScore;//setting high score from start.
+
+        currentScore = PlayerPrefs.GetInt("CurrentScore");
+        UIManager.instance.scoreText.text = "Score: " + currentScore;
 
         canPause = true;
     }
@@ -71,6 +76,8 @@ public class GameManager : MonoBehaviour
 
             MusicController.instance.PlayGameOver();//when we show game over screen we going to call music controller.
 
+            PlayerPrefs.SetInt("HighScore", highScore);
+
             canPause = false;
         }
     }
@@ -94,7 +101,7 @@ public class GameManager : MonoBehaviour
         {
             highScore = currentScore;//if it is
             UIManager.instance.hiScoreText.text = "High-Score " + highScore;//and update here
-            PlayerPrefs.SetInt("HighScore", highScore);//this is the way we can keep track simple things like High Score.
+            //PlayerPrefs.SetInt("HighScore", highScore);//this is the way we can keep track simple things like High Score.
         }
     }
 
@@ -106,6 +113,8 @@ public class GameManager : MonoBehaviour
         canPause = false;
 
         yield return new WaitForSeconds(.5f);
+
+        PlayerPrefs.SetInt("HighScore", highScore);
 
         PlayerPrefs.SetInt("currentLives", currentLives);//This way we can keep track of how  many lives we have going into next level.
 
