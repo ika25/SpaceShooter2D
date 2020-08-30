@@ -70,6 +70,14 @@ PrefabInstance:
       propertyPath: changeddirection.y
       value: -0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: timeBetweenShots
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8576164672563776103, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
       propertyPath: m_Name
       value: EnemyShip5 (1)
@@ -163,6 +171,14 @@ PrefabInstance:
     - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
       propertyPath: changeddirection.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: timeBetweenShots
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8576164672563776103, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
       propertyPath: m_Name
@@ -258,6 +274,14 @@ PrefabInstance:
       propertyPath: changeddirection.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: timeBetweenShots
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8576164672563776103, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
       propertyPath: m_Name
       value: EnemyShip5 (3)
@@ -347,6 +371,14 @@ PrefabInstance:
     - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
       propertyPath: changeddirection.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576164672563776098, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
+      propertyPath: timeBetweenShots
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8576164672563776103, guid: b8c082ee997ab944c97ec4efc9ad3161, type: 3}
       propertyPath: m_Name

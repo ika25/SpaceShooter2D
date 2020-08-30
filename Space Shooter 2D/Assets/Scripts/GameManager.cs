@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         currentLives = PlayerPrefs.GetInt("CurrentLives");
         UIManager.instance.livesText.text = "x " + currentLives;
 
-        UIManager.instance.scoreText.text = "Score: " + currentScore;
+        UIManager.instance.scoreText.text = "Score: " + currentScore;//so we can see on screen
 
 
         highScore = PlayerPrefs.GetInt("HighScore");//this looks in PLayerPrefs and see what is the high score at the moment.
