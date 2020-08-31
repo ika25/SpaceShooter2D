@@ -38,14 +38,12 @@ public class GameManager : MonoBehaviour
         currentLives = PlayerPrefs.GetInt("CurrentLives");
         UIManager.instance.livesText.text = "x " + currentLives;
 
-        UIManager.instance.scoreText.text = "Score: " + currentScore;//so we can see on screen
-
 
         highScore = PlayerPrefs.GetInt("HighScore");//this looks in PLayerPrefs and see what is the high score at the moment.
         UIManager.instance.hiScoreText.text = "High-Score " + highScore;//setting high score from start.
 
-        currentScore = PlayerPrefs.GetInt("CurrentScore");
-        UIManager.instance.scoreText.text = "Score: " + currentScore;
+        currentScore = PlayerPrefs.GetInt("CurrentScore");//number that keeps going between each levelas we go.
+        UIManager.instance.scoreText.text = "Score: " + currentScore;//so we can see on screen
 
         canPause = true;
     }
@@ -75,7 +73,6 @@ public class GameManager : MonoBehaviour
             WaveManager.instance.canSpwanWaves = false;//when player dead no need to send any more enemies into the level.
 
             MusicController.instance.PlayGameOver();//when we show game over screen we going to call music controller.
-
             PlayerPrefs.SetInt("HighScore", highScore);
 
             canPause = false;
@@ -95,6 +92,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int scoreToAdd)
     {
         currentScore += scoreToAdd;
+        levelScore += scoreToAdd;
         UIManager.instance.scoreText.text = "Score: " + currentScore;
 
         if(currentScore > highScore)//Whenever we add some score in we are going to do a check.
@@ -113,6 +111,21 @@ public class GameManager : MonoBehaviour
         canPause = false;
 
         yield return new WaitForSeconds(.5f);
+
+        UIManager.instance.endLevelScore.text = "Level Score" + levelScore;
+        UIManager.instance.endLevelScore.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(.5f);
+
+        PlayerPrefs.SetInt("CurrentScore", currentScore);
+        UIManager.instance.endCurrentScore.text = "Total Score: " + currentScore;//This way we are taking our currents score all the time as we go and its keeping track of across multiple levels.
+        UIManager.instance.endCurrentScore.gameObject.SetActive(true);//to activate this
+
+        if(currentScore == highScore)
+        {
+            yield return new WaitForSeconds(.5f);
+            UIManager.instance.highScoreNotice.SetActive(true);
+        }
        
         PlayerPrefs.SetInt("HighScore", highScore);
 
@@ -120,7 +133,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(waitForLevelEnd);
 
-        SceneManager.LoadScene(nextLevel);
+        SceneManager.LoadScene(nextLevel);//will load nect level.
 
     }
 
